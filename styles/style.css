@@ -8,6 +8,20 @@ html {
   block-size: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
 .page {
   display: flex;
   flex-direction: column;
@@ -38,7 +52,7 @@ html {
 .result__video-container {
   position: relative;
   block-size: 386px;
-  margin-block-end: 20px;
+  margin-block-end: 18px; /* исправление по ревью */
 }
 
 .result__video {
@@ -46,6 +60,7 @@ html {
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
@@ -71,18 +86,20 @@ html {
 }
 
 .search-form__textfield {
-  inline-size: 225px;
-  padding: 0;
+  min-width: 225px;
+  padding: 2px 0 0; /* исправление по ревью */
   border: none;
   border-block: 1px solid #fff;
   color: #fff;
   background-color: transparent;
   font: inherit;
+  line-height: 23px; /* исправление по ревью */
   appearance: none;
 }
 
 .search-form__textfield::placeholder {
   color: rgb(255 255 255 / 0.7);
+  word-spacing: -3px; /* исправление по ревью */
 }
 
 .search-form__textfield:focus-visible {
@@ -127,14 +144,14 @@ html {
   font-size: 18px;
   font-weight: 400;
   line-height: 1;
-  margin-block-end: 5px;
+  margin-block-end: 7px; /* исправление по ревью */
 }
 
 .content__list-container {
   position: relative;
   display: flex;
   flex-direction: column;
-  block-size: 300px;
+  block-size: 298px; /* исправление по ревью */
   overflow-y: auto;
   gap: 30px;
 }
@@ -154,7 +171,7 @@ html {
   flex-direction: column;
   flex-grow: 1;
   align-self: stretch;
-  gap: 20px;
+  gap: 22px; /* исправление по ревью */
   min-inline-size: 0;
 }
 
@@ -162,7 +179,8 @@ html {
   font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
-  line-height: 0.94;
+  line-height: 70px; /* исправление по ревью  */
+  word-spacing: -1px; /* исправление по ревью  */
   text-transform: uppercase;
 }
 
@@ -180,7 +198,7 @@ html {
   white-space: nowrap;
 }
 
-h1,
+/*h1, (Перенес в начало)
 h2,
 h3,
 h4,
@@ -193,6 +211,7 @@ fieldset {
   margin: 0;
   padding: 0;
 }
+*/
 
 ul,
 ol {
@@ -261,11 +280,13 @@ ol {
 }
 
 .content__video-card-description-container {
+  padding-block-start: 4px; /* исправление по ревью */
   flex-grow: 1;
   min-inline-size: 0;
 }
 
 .content__video-card-title {
+  margin-block-end: 3px; /* исправление по ревью */
   font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
@@ -291,8 +312,11 @@ ol {
 }
 
 .more-button {
-  inline-size: 100%;
+  inline-size: auto;
+  margin-inline: 3px;
+  margin-block-end: 2px; /* исправление по ревью */
   block-size: 34px;
+  flex-shrink: 0; /* исправление по ревью */
 }
 
 .button:hover {
