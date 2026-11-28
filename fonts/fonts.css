@@ -6,6 +6,15 @@
 }
 
 @font-face {
+  font-family: 'Oswald Hyphen';
+  src: url(./Oswald-Bold-Hyphen.woff) format('woff');
+  font-weight: 700;
+  font-style: normal;
+  unicode-range: U+002D;
+  size-adjust: 98%;
+}
+
+@font-face {
   font-family: 'Fira Sans Condensed';
   src: url(./FiraSansCondensed-Regular.woff2) format('woff2'), url(./FiraSansCondensed-Regular.woff) format('woff');
   font-weight: 400;
